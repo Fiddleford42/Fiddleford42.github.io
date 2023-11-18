@@ -108,14 +108,14 @@ gtag('config', 'UA-161735093-1');
 <nav class="nav navbar-top primary">
 <h1 class="nav_logo">
 <!-- <i class="fab fa-product-hunt"></i> -->
-<a href="https://github.com/haidargit" target="_blank"><img src="py.png" alt="IDE" width="40"
+<a href="https://github.com/haidargit" target="_blank"><img src="py.png" width="40"
 height="34" style="margin-top: -7px"></a>
 
 <span>The Oregon Trail <sup>(By Eric*)</sup> </span>
 </h1>
 <div class="addthis_inline_share_toolbox_28pb"></div>
 </nav>
-<h1 class="text-primary">To begin, click run</h1>
+<h1 class="text-primary">To play, click start</h1>
 <div id="mi" class="split">
 
 <ul class="nav nav-tabs" role="tablist">
@@ -130,13 +130,9 @@ height="34" style="margin-top: -7px"></a>
 <div id="control-btn">
 <button type="button" class="btn btn-success btn-sm" id="run-btn" onclick="run_python()"
 data-toggle="popover" data-placement="bottom" data-trigger="hover" data-content="F8"><i
-class="fa fa-play"></i>&ensp;<strong>Run</strong></button>
+class="fa fa-play"></i>&ensp;<strong>Start Game</strong></button>
 </div>
-<a tabindex="0" type="button" class="btn btn-default btn-sm" id="share-btn"
-onclick="share_code_modal()" data-toggle="popover" data-placement="right" data-trigger="hover"
-data-content="Share the code to your friends and colleagues"><i
-class="fa fa-share"></i>&ensp;<strong>Share</strong></a>
-<input class="textbox" type="text" id="input_arguments" placeholder=" Command Line Arguments">
+<input id="input_arguments">
 </div>
 
 </div>
@@ -145,22 +141,7 @@ class="fa fa-share"></i>&ensp;<strong>Share</strong></a>
 <div class="boxed1" id="output_header">
 <div id="hint-section"></div>
 <div class="btn-group status" id="tool-btn">
-<button type="button" data-toggle="tooltip" data-container="body" data-placement="right"
-title="Copy to Clipboard" class="btn btn-default btn-sm status" onclick="copy_output()"><i
-class="fas fa-copy"></i></button>
-<button type="button" data-toggle="tooltip" data-container="body" data-placement="right"
-title="Download" class="btn btn-default btn-sm status" onclick="download_modal()"><i
-class="fas fa-download"></i></button>
-<button type="button" data-toggle="tooltip" data-container="body" data-placement="right"
-title="Clear" class="btn btn-default btn-sm status" onclick="clear_output()"><i
-class="fas fa-eraser"></i></button>
 </div>
-<button type="button" data-toggle="tooltip" data-container="body" data-placement="right"
-title="Start Terminal" class="btn btn-default btn-sm status" id="start-term"
-onclick="start_terminal()"><i class="fas fa-terminal"></i></button>
-<button type="button" data-toggle="tooltip" data-container="body" data-placement="right"
-title="Expand/Collapse" class="btn btn-default btn-sm status" id="term-expand"
-onclick="term_expand()"><i class="fas fa-expand-alt fa-lg"></i></button>
 &ensp;
 <div id="output-status"></div>
 </div>
@@ -698,10 +679,6 @@ _bsa.init('stickybox', 'CEBICK3U', 'placement:wwwonline-pythoncom');
 })();
 </script>
 
-<!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript"
-src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e908e7d111adc12"></script>
-<!-- partial -->
 
 </body>
 
