@@ -21,12 +21,6 @@
 
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-<meta name="description"
-content="Build and Run your Python code instantly. Online-Python is a quick and easy tool that helps you to build, compile, test your python programs.">
-<meta name="keywords"
-content="online python compiler, online python ide, online python interpreter, python online interpreter, online python editor, online python 3, online python code runner, run python script online, online python code editor, online python syntax checker, online python with numpy, online python text editor, python online ide free, online python editor free">
-<meta name="author" content="online-python">
-<meta name="copyright" content="ShareAlike">
 
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
@@ -181,96 +175,20 @@ aria-hidden="true">&times;</span></button>
 </form>
 </div>
 
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="submit" class="btn btn-primary" onclick="download_output()"
-data-dismiss="modal">Download</button>
 </div>
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
-<!-- Delete Editor Tab modal -->
-<div class="modal fade" tabindex="-1" role="dialog" id="closeEditorTab">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-aria-hidden="true">&times;</span></button>
-<h3 class="modal-title" id="close_file_title">Close File</h3>
-</div>
-
-<div class="modal-body">
-<p>Your changes will be lost. Are you sure you want to Close the file ?</p>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-<button type="submit" class="btn btn-primary" onclick="close_editor_tab()"
-data-dismiss="modal">Yes</button>
-</div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
-<!-- Delete Editor Tab modal -->
-<div class="modal fade" tabindex="-1" role="dialog" id="saveEditorTab">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-aria-hidden="true">&times;</span></button>
-<h3 class="modal-title" id="save_file_title">Save</h3>
-</div>
-
 <div class="modal-body">
-<p>Do you want to save the file ?</p>
-<form>
-<div class="form-group">
-<label for="name">File Name:</label>
-<input type="text" class="form-control" id="code_file_name" value="main.py">
-</div>
-</form>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-<button type="submit" class="btn btn-primary" onclick="download_code()"
-data-dismiss="modal">Yes</button>
-</div>
-
-</div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-<!-- Share modal -->
-<div class="modal fade" tabindex="-1" role="dialog" id="shareModal">
-<div class="modal-dialog" role="document" id="share-dialog">
-<div class="modal-content" id="share-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-aria-hidden="true">&times;</span></button>
-<h3 class="modal-title" id="share_code">Share the Code</h3>
-</div>
-
-<div class="modal-body">
-<!-- <p>Do you want to save the file ?</p> -->
-<form>
-<div class="form-group">
-<label for="name">Expiry Period:</label>
-<select class="form-control" id="expiry_select">
-<option value=1>24 hour</option>
-<option value=30>1 month</option>
-<option selected value=180>6 month</option>
-<option value=-1>Never</option>
-</select>
-</div>
-</form>
-<br />
-<button type="submit" class="btn btn-primary" onclick="share_code()" data-dismiss="modal"
-id="share-btn-modal">Share</button>
-</div>
 
 <!-- <div class="modal-footer">
 </div> -->
@@ -279,80 +197,9 @@ id="share-btn-modal">Share</button>
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
-
-<!-- Share modal After -->
-<div class="modal fade" tabindex="-1" role="dialog" id="shareModalAfter">
-<div class="modal-dialog" role="document" id="share-dialog-after">
-<div class="modal-content" id="share-content-after">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-aria-hidden="true">&times;</span></button>
-<h3 class="modal-title" id="share_code">Share the Code</h3>
-</div>
-
-<div class="modal-body">
-<!-- <p>Do you want to save the file ?</p> -->
-<form>
-<div class="form-group">
-<label for="name">URL:</label><span id="share-copy" onclick="copy_share_url()"><i
-class="far fa-copy"></i></span>
-<input type="text" class="form-control" id="share_url_box"
-value="http://localhost:8888/onlineide/code/HoiJqp9nQT" readonly>
-</div>
-</form>
-<div class="addthis_inline_share_toolbox_7qby" id="addthis_share_modal"></div>
-</div>
-<!-- <div class="modal-footer">
-</div> -->
-
 </div><!-- /.modal-content -->
 </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
-
-<!-- About Site modal -->
-<div class="modal" tabindex="-1" role="dialog" id="aboutSiteModal">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-aria-hidden="true">&times;</span></button>
-<h2 class="modal-title"><strong>About online-python.com</strong></h2>
-</div>
-
-<div class="modal-body abountModalBody">
-<p><a href="/" target="_blank">Online Python IDE</a> is a web-based tool powered by <a
-href="https://ace.c9.io/" target="_blank">ACE</a> code editor. This tool can be used
-to learn, build, run, test your python script. You can open the script from your local
-and continue to build using this IDE. Code and output can be downloaded to local.</p>
-
-<h3><strong>Keyboard Shortcuts</strong></h3>
-<ul style="font-size: larger;">
-<li>Run Code - F8</li>
-<li>Share Code - F9</li>
-<li>Save Code - F10</li>
-<li>Open Editor Command Palette - F1</li>
-</ul>
-
-<h3><strong>Report a bug</strong></h3>
-<p>If you encounter a bug or have questions or suggestions for improvements, please report
-it via feedback.</p>
-
-<h3><strong>Data policy</strong></h3>
-<p>No data is saved in the server. The code is sent to the server for execution and will be
-cleared after completion. Shared Code will be saved in the server till the selected
-expiry period.</p>
-</div>
-
-<div class="modal-footer">
-<p>&emsp;Copyright © 2020 online-python.com</p>
-<button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
-</div>
-
-</div><!-- /.modal-content -->
-</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
 
 <script type="text/javascript">
 ace.require("ace/ext/language_tools");
