@@ -210,15 +210,359 @@ var request, init_ts, open_file_name;
 var lang = 'python3';
 default_content = "\
 \n\
-# :)\n\
+import sys\n\
 \n\
-def OperasiTambah(a, b):\n\
-    return (a + b)\n\
+wagon = '''\n\
+     wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww\n\
+    ww       wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                       w      w\n\
+   ww         wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                     ww     ww\n\
+   ww         wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                     ww     ww\n\
+  ww           wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                    wwwwwwwwwwwww\n\
+  ww           wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww                    wwwwwwwwwwwwwwwww\n\
+  wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww     wwwwwwwwww    wwwwwwwwwwwwwwwwww\n\
+  wwwww  w w  wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww  w w  wwwwwwwww  wwwwwwwwwwwwwwwwww\n\
+ www w       w wwwwwwwwwwwwwwwwwwwwwwwwwww w       w wwwwwww wwwwwwwwwwwwwwwwwww\n\
+    w         w                           w         w         wwwwwwwwwwwwwwwwww\n\
+     w       w                             w       w           www          www\n\
+        w w                                   w w              aah          aah\n\
+'''\n\
 \n\
-a = int(input('Masukkan Angka Pertama: '))\n\
-b = int(input('Masukan Angka Kedua: '))\n\
+success = 0\n\
+fail = 0\n\
 \n\
-print(f'Hasil tambah dari {a} dan {b} adalah {OperasiTambah(a, b)}')\n\
+def not_stopping():\n\
+    print('''\n\
+    You continue.\n\
+    ''')\n\
+    print('The weather is cold and the rations are low.')\n\
+    print('What do you do?)\n\
+    print('  1) Eat food anyway"')\n\
+    print("  2) Fast(Dont eat)")\n\
+    print("  3) Eat a stick")\n\
+    \n\
+    no_food = float(input("Enter your answer (1-3):"))\n\
+   \n\
+    if no_food == 1:\n\
+        fail += 1\n\
+        print("You die from starvation.")\n\
+    elif no_food == 2:\n\
+        fail += 1\n\
+        print("Your stomach hurts.")\n\
+    elif no_food == 3:\n\
+        fail += 1\n\
+        print("You die of dysentery.")\n\
+    else:\n\
+        print("Wrong input.")\n\
+    \n\
+def stopping():\n\
+    print("You stop.")\n\
+    \n\
+    print("John announces, Alright, cook meals, hunt, anything. Be back before dawn and be ready to go.")\n\
+    \n\
+    print("What do you do?")\n\
+    \n\
+    print("  1) Hunt")\n\
+    print("  2) Eat the food you brought")\n\
+    print("  3) Set up for camp")\n\
+    print("  4) A mix of all")\n\
+    \n\
+    answer_ten = float(input("Enter your answer (1-4):"))\n\
+    \n\
+    if answer_ten == 1 or 2 or 3:\n\
+        success += 1\n\
+    elif answer_ten == 4:\n\
+        success += 3\n\
+    else:\n\
+        print("Wrong input.")\n\
+        sys.exit()\n\
+    \n\
+    print("Time for sleep")\n\
+    \n\
+    print("You sleep until five in the morning when you are woken up by a cow bell sound")\n\
+    \n\
+    print("At which point there is someone telling everyone to get up and ready.")\n\
+    \n\
+    print("Your stomach gurgles.")\n\
+    \n\
+    print("Are you worried?")\n\
+    \n\
+    print("  1) Yes")\n\
+    print("  2) No")\n\
+    \n\
+    worried_choice = float(input("Enter your answer (1-2):"))\n\
+    \n\
+    if worried_choice == 1:\n\
+        success += 1\n\
+    elif worried_choice == 2:\n\
+        fail += 1\n\
+        print("You die of dysentery.")\n\
+    else:\n\
+        print("Wrong input.")\n\
+        sys.exit()\n\
+    \n\
+    print("Do you take medicine?")\n\
+    \n\
+    print("  1) Yes")\n\
+    print("  2) No")\n\
+    \n\
+    medicine_choice = float(input(Enter your answer (1-2):"))\n\
+    \n\
+    if medicine_choice == 1:\n\
+        success += 1\n\
+    elif medicine_choice == 2:\n\
+        fail += 1\n\
+        print("You die of dysentery.")\n\
+        print(f"Points: {success - fail}")\n\
+    else:\n\
+        print("Wrong input.")\n\
+    print("You ride into the sunset.")\n\
+\n\
+print(wagon)\n\
+print("================")\n\
+print("The Oregon Trail")\n\
+print("================")\n\
+print("By Eric Lorenz")\n\
+print("================")\n\
+print("Aided by Finn")\n\
+print("================")\n\
+\n\
+name = input("Choose your name: ")\n\
+\n\
+print("You are in Independence, Missouri. You and other fur traders and trappers are going to explore the northwest")\n\
+\n\
+print("What will you pack?")\n\
+\n\
+print("  1) Lantern")\n\
+print("  2) Lantern and butter churn")\n\
+print("  3) Butter churn")\n\
+print("  4) Box")\n\
+print("  5) Barrel")\n\
+print("  6) Butter churn and box")\n\
+print("  7) Butter churn and barrel")\n\
+print("  8) Lantern and box")\n\
+print("  9) Lantern and barrel")\n\
+print(" 10) Box and barrel")\n\
+print(" 11) Pot")\n\
+print(" 12) Medicine, water, and other bottled liquids")\n\
+print(" 13) Pot and box")\n\
+print(" 14) Pot and barrel")\n\
+print(" 15) Pot and lantern")\n\
+print(" 16) Pot and butter churn")\n\
+print(" 17) Pot and medicine")\n\
+print(" 18) Medicine and box")\n\
+print(" 19) Medicine and barrel")\n\
+print(" 20) Medicine and lantern")\n\
+print(" 21) Medicine and butter churn")\n\
+print(" 22) All")\n\
+\n\
+answer = float(input("Enter your answer (1-22):"))\n\
+\n\
+if answer == != 22:\n\
+    fail += 1\n\
+elif answer == 22:\n\
+    success += 1\n\
+else:\n\
+    print("Wrong input.")\n\
+    sys.exit()\n\
+    \n\
+print("The leader of your group says to feed your horses before you leave. Do you feed them?")\n\
+\n\
+print("  1) Yes")\n\
+print("  2) No")\n\
+\n\
+answer_two = float(input("Enter your answer (1-2):"))\n\
+\n\
+if answer_two == 1:\n\
+    success += 1\n\
+elif answer_two == 2:\n\
+    fail += 1\n\
+else:\n\
+    print("Wrong input.")\n\
+    sys.exit()\n\
+    \n\
+print("Your leader, John Bartleson, has told you that its time to start your journey.")\n\
+\n\
+print("Youre finally on the trail! But, your son says he needs to go to the bathroom. What do you do?")\n\
+\n\
+print("  1) Pull over")\n\
+print("  2) Let him go in the pot")\n\
+print("  3) Tell him to hold it until the whole group stops")\n\
+\n\
+answer_three = float(input("Enter your answer (1-3):"))\n\
+\n\
+if answer_three == 1 or 2:\n\
+    success += 1\n\
+elif answer_three == 3:\n\
+    fail += 1\n\
+else:\n\
+    print("Wrong input.")\n\
+    sys.exit()\n\
+    \n\
+print("Your daughter complains of hunger. What do you do?")\n\
+\n\
+print("  1) Give her some food")\n\
+print("  2) Yell about the complaints this early into the trip")\n\
+print("  3) Ignore her")\n\
+\n\
+answer_four = float(input("Enter your answer (1-3):"))\n\
+\n\
+if answer_four == 1 or 2:\n\
+    success += 1\n\
+elif answer_four == 3:\n\
+    fail += 1\n\
+else:\n\
+    print("Wrong input.")\n\
+    sys.exit()\n\
+    \n\
+print("You continue on the path for 12 miles.")\n\
+\n\
+print("You reach a stop shortly")\n\
+\n\
+print("John announces, Alright, cook meals, hunt, anything. Be back before dawn and be ready to go.")\n\
+\n\
+print("What do you do?")\n\
+\n\
+print("  1) Hunt")\n\
+print("  2) Eat the food you brought")\n\
+print("  3) Set up for camp")\n\
+print("  4) A mix of all")\n\
+\n\
+answer_five = float(input("Enter your answer (1-4):"))\n\
+\n\
+if answer_five == 1 or 2 or 3:\n\
+    success += 1\n\
+elif answer_five == 4:\n\
+    success += 3\n\
+else:\n\
+    print("Wrong input.")\n\
+    sys.exit()\n\
+\n\
+print("Time for sleep")\n\
+\n\
+print("You sleep until five in the morning when you are woken up by a cow bell sound")\n\
+\n\
+print("At which point there is someone telling everyone to get up and ready.")\n\
+\n\
+print("Your son is groaning about having to wake up what do you do?")\n\
+\n\
+print("  1) Ignore him")\n\
+print("  2) Comfort him")\n\
+print("  3) Yell at your son and say that if he didnt want to get up early that he shouldnt have come")\n\
+\n\
+answer_six = float(input("Enter your answer (1-3):"))\n\
+\n\
+if answer_six == 1:\n\
+    fail += 1\n\
+elif answer_six == 2 or 3:\n\
+    success += 1\n\
+else:\n\
+    print("Wrong input.")\n\
+    sys.exit()\n\
+\n\
+print("Youre back on the trail.")\n\
+\n\
+print("After much more travel, your group comes upon a boulder blocking your path.")\n\
+\n\
+print("What do you do?")\n\
+\n\
+obstacle_solution = input()\n\
+\n\
+print(f"You and your group {obstacle_solution} and continue on.")\n\
+\n\
+print("You continue.")\n\
+\n\
+print("Your son says that he is tired. What do you do?")\n\
+\n\
+print("  1) Yell at him")\n\
+print("  2) Ignore him")\n\
+print("  3) Leave him on the side of the trail")\n\
+\n\
+answer_seven = int(input("Enter your answer (1-3):"))\n\
+\n\
+if answer_seven == 1:\n\
+    fail += 1\n\
+elif answer == 2 or 3:\n\
+    success += 1\n\
+else:\n\
+    print("Wrong input.")\n\
+    sys.exit()\n\
+   \n\
+print("Back on the trail.")\n\
+\n\
+print("A group of Native Americans are throwing their spears and shooting arrows at you!")\n\
+\n\
+battle = input("What will you and your group do?")\n\
+\n\
+print(f"You and your group {battle} and you continue.")\n\
+\n\
+success += 1\n\
+\n\
+print("As you continue, you feel slightly hungry.")\n\
+print(f"You tell your spouse to steer the horses while you get some food.")\n\
+\n\
+print("You return to the horses.")\n\
+\n\
+print("Something seems off.")\n\
+print("One of your horses collapses.")\n\
+\n\
+horses_reaction = input("What do you say?")\n\
+\n\
+print(f"You exclaim: {horses_reaction}!")\n\
+\n\
+print("You pull over.")\n\
+\n\
+print(f"Why, {name} thats quite an injury your horse has got! John says.")\n\
+\n\
+talk = input()\n\
+\n\
+print(f"Were gonna have to do something with him, {name}.")\n\
+\n\
+talk_2 = input()\n\
+\n\
+print(f"Alright, {name} well {talk_2}.")\n\
+\n\
+print(f"After you {talk_2} you continue on the road.")\n\
+\n\
+print("Do you wish to ask about your horse?")\n\
+print("  1) Yes")\n\
+print("  2) No")\n\
+\n\
+answer_eight = float(input("Enter your answer (1-2):"))\n\
+\n\
+if answer_eight == 1:\n\
+    question_input = input("Type your question:")\n\
+    print("I know nothing about your horse! Your spouse exclaimes")\n\
+    print("I never touched the horses! Your daughter says.")\n\
+    \n\
+    assurance = input("Type your action:")\n\
+    print(f"You {assurance}")\n\
+elif answer_eight == 2:\n\
+    success == success\n\
+else:\n\
+    print("Wrong input.")\n\
+    \n\
+print("Its time for another stop with your group.")\n\
+print("Do you stop?")\n\
+\n\
+print("  1) Yes")\n\
+print("  2) No")\n\
+\n\
+answer_nine = float(input("Enter your answer (1-2):"))\n\
+\n\
+if answer_nine == 1:\n\
+    stopping()\n\
+    success += 1\n\
+elif answer_nine == 2:\n\
+    not_stopping()\n\
+    success += 1\n\
+else:\n\
+    print("Wrong input.")\n\
+    sys.exit()\n\
+\n\
+if success >= fail:\n\
+    print("You win! :D")\n\
+elif fail >= success:\n\
+    print("You lose! :(")\n\
 ";
 var prev_result = 'in';
 var site_url = "https://www.online-python.com/"
